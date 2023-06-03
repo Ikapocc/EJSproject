@@ -7,6 +7,21 @@
     <title>To Do List</title>
 </head>
 <body>
-    <h1>Its a <%=day%>!</h1>
-</body>
+    <h1><%= day %></h1>
+
+    <ul>
+        <li>Buy food</li>
+        <li>Cook food</li>
+        <li>Eat food</li>
+        <% for (let i = 0; i < mytask.length; i++) {%>
+            <li><%= mytask[i] %></li>  
+<%}%>
+    </ul>
+
+    <form action="/" method="post">
+        <label for="task">Add a new task</label>
+        <input type="text" id="task" name="taskname">
+        <button type="submit">Send</button>
+    </form>
+</body> 
 </html>
